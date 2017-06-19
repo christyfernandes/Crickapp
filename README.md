@@ -139,8 +139,8 @@ Once You install all dependencencies node, npm and angular cli just verify them
 
 ## Authors
 
-* Christopher B Fernandes 
-    Software Engineer, web developer, front-end developer
+Christopher B Fernandes 
+Software Engineer, web developer, front-end developer
 
 ## License
 
