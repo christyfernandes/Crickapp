@@ -3,7 +3,7 @@
     <div class="col-sm-12 text-center">
       <div class="row">
         <div class="col-sm-6 text center">
-          <img [src]="playerStats.imageURL" alt="">
+          <img src="{{playerStats.imageURL}}" alt="">
           <div>
           <img src="http://cdn.cricapi.com/country/Flag of {{playerStats.country}}.png" alt="{{playerStats.country}}" title="{{playerStats.country}}" height="60" style="margin-right:5px;">
           <span>{{playerStats.country | uppercase}}</span>
@@ -60,6 +60,9 @@
                 <td>{{data.Inns}}</td>
                 <td>{{data.Mat}}</td>
               </tr>
+              <tr *ngIf="battingArray <=0">
+                <td colspan="13">No data found</td>
+              </tr>
             </tbody>
           </table>
         </div>
@@ -102,6 +105,9 @@
                 <td>{{data.Balls}}</td>
                 <td>{{data.Inns}}</td>
                 <td>{{data.Mat}}</td>
+              </tr>
+              <tr *ngIf="bowlingArray <=0">
+                <td colspan="13">No data found</td>
               </tr>
             </tbody>
           </table>

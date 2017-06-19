@@ -26,31 +26,60 @@ export class PlayerComponent implements OnInit {
 
     this.homeservice.getPlayerStatsById(this.playerId).subscribe((result) => {
       this.playerStats = result.response;
-      let battingODIs = result.response.data.batting.ODIs;
-      battingODIs.name = "ODIs";
-      let battingT20Is = result.response.data.batting.T20Is;
-      battingT20Is.name = "T20Is";
-      let battingfirstClass = result.response.data.batting.firstClass;
-      battingfirstClass.name = "firstClass";
-      let battinglistA = result.response.data.batting.listA;
-      battinglistA.name = "listA";
-      let battingtests = result.response.data.batting.tests;
-      battingtests.name = "tests";
-      this.battingArray.push(battingODIs);this.battingArray.push(battingT20Is);this.battingArray.push(battingfirstClass);this.battingArray.push(battinglistA);this.battingArray.push(battingtests);
+      if(result.response.data){
+        if(result.response.data.batting.ODIs){
+          let battingODIs = result.response.data.batting.ODIs;
+          battingODIs.name = "ODIs";
+          this.battingArray.push(battingODIs);
+        }
 
-      let bowlingODIs = result.response.data.bowling.ODIs;
-      bowlingODIs.name = "ODIs";
-      let bowlingT20Is = result.response.data.bowling.T20Is;
-      bowlingT20Is.name = "T20Is";
-      let bowlingfirstClass = result.response.data.bowling.firstClass;
-      bowlingfirstClass.name = "firstClass";
-      let bowlinglistA = result.response.data.bowling.listA;
-      bowlinglistA.name = "listA";
-      let bowlingtests = result.response.data.bowling.tests;
-      bowlingtests.name = "tests";
-      this.bowlingArray.push(bowlingODIs);this.bowlingArray.push(bowlingT20Is);this.bowlingArray.push(bowlingfirstClass);this.bowlingArray.push(bowlinglistA);this.bowlingArray.push(bowlingtests);
+        if(result.response.data.batting.T20Is){
+          let battingT20Is = result.response.data.batting.T20Is;
+          battingT20Is.name = "T20Is";
+          this.battingArray.push(battingT20Is);
+        }
 
-      console.log("bowling array",this.bowlingArray);
+        if(result.response.data.batting.firstClass){
+          let battingfirstClass = result.response.data.batting.firstClass;
+          battingfirstClass.name = "firstClass";
+          this.battingArray.push(battingfirstClass);
+        }
+        if(result.response.data.batting.listA){
+          let battinglistA = result.response.data.batting.listA;
+          battinglistA.name = "listA";
+          this.battingArray.push(battinglistA);
+        }
+        if(result.response.data.batting.tests){
+          let battingtests = result.response.data.batting.tests;
+          battingtests.name = "tests";
+          this.battingArray.push(battingtests);
+        }
+        if(result.response.data.bowling.ODIs){
+          let bowlingODIs = result.response.data.bowling.ODIs;
+          bowlingODIs.name = "ODIs";
+          this.bowlingArray.push(bowlingODIs);
+        }
+        if(result.response.data.bowling.T20Is){
+          let bowlingT20Is = result.response.data.bowling.T20Is;
+          bowlingT20Is.name = "T20Is";
+          this.bowlingArray.push(bowlingT20Is);
+        }
+        if(result.response.data.bowling.firstClass){
+          let bowlingfirstClass = result.response.data.bowling.firstClass;
+          bowlingfirstClass.name = "firstClass";
+          this.bowlingArray.push(bowlingfirstClass);
+        }
+        if(result.response.data.bowling.listA){
+          let bowlinglistA = result.response.data.bowling.listA;
+          bowlinglistA.name = "listA";
+          this.bowlingArray.push(bowlinglistA);
+        }
+        if(result.response.data.bowling.tests){
+          let bowlingtests = result.response.data.bowling.tests;
+          bowlingtests.name = "tests";
+          this.bowlingArray.push(bowlingtests);
+        }      
+      }
     },
     (err)=>{
       console.log("falied to get response from the srever !");

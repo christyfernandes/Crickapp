@@ -19,6 +19,7 @@ footer img{
     border-radius: 50%;
     border: 2px solid #00ffac;
     filter: brightness(100%);
+    object-fit: cover;
 }    
 
 footer img:hover{
