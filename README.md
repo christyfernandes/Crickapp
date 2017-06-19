@@ -1,11 +1,11 @@
 # Cricket App
 
 This is a cricket app built with angular 2, node, express.
-    * It provides you cricketers playing statistics 
-    * You can serach by player name or go to all players list to see all available players
-    * New matches that are going to start along with teams,time and status of match
-    * Old matches recently played along with teams,status and status of match
-    * Match calendar or schedule 
+* It provides you cricketers playing statistics 
+* You can serach by player name or go to all players list to see all available players
+* New matches that are going to start along with teams,time and status of match
+* Old matches recently played along with teams,status and status of match
+* Match calendar or schedule 
 
 ## Built With
 
@@ -15,11 +15,16 @@ This is a cricket app built with angular 2, node, express.
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+Follow the below instrunctions to get **Cricket app** running on you local machine
 
 ### Prerequisites
 
 Both the CLI and generated project have dependencies that require **Node 6.9.0** or higher, together with **NPM 3** or higher.
+
+* To install node visit [https://nodejs.org/en/download/](https://nodejs.org/en/download/)
+* NPM comes along with the node installation
+* To verify node,npm installation and proper versions visit [https://www.npmjs.com/get-npm](https://www.npmjs.com/get-npm)
+
 
 
 ### Installing
