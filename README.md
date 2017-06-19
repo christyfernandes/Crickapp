@@ -115,8 +115,6 @@ Once You install all dependencencies node, npm and angular cli just verify them
 
 3. Open browser and type **localhost:4200** 
 
-     Make sure nothing is running on port 4200, because cricket app frontend server is configured to run on **port 4200**
-
 4. If u see any error please check [prerequisites](#prerequisites) are properly installed 
 
     OR
@@ -126,7 +124,7 @@ Once You install all dependencencies node, npm and angular cli just verify them
 
     OR
 
-    Make sure nothing is running on port 4200, because cricket app backend server is configured to run on **port 4200**
+    Make sure nothing is running on port 4200, because cricket app frontend server is configured to run on **port 4200**
 
     OR
 
