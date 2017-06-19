@@ -1,0 +1,48 @@
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+# compiled output
+Cricketapp/cric-angular/dist
+Cricketapp/cric-angular/tmp
+Cricketapp/cric-angular/out-tsc
+
+# dependencies
+cric-angular/node_modules
+
+# IDEs and editors
+Cricketapp/cric-angular/.idea
+Cricketapp/cric-angular/.project
+Cricketapp/cric-angular/.classpath
+Cricketapp/cric-angular/.c9/
+Cricketapp/cric-angular/*.launch
+Cricketapp/cric-angular/.settings/
+Cricketapp/cric-angular/*.sublime-workspace
+
+# IDE - VSCode
+Cricketapp/cric-angular/.vscode/*
+Cricketapp/cric-angular/!.vscode/settings.json
+Cricketapp/cric-angular/!.vscode/tasks.json
+Cricketapp/cric-angular/!.vscode/launch.json
+Cricketapp/cric-angular/!.vscode/extensions.json
+
+# misc
+Cricketapp/cric-angular/.sass-cache
+Cricketapp/cric-angular/connect.lock
+Cricketapp/cric-angular/coverage
+Cricketapp/cric-angular/libpeerconnection.log
+Cricketapp/cric-angular/npm-debug.log
+Cricketapp/cric-angular/testem.log
+Cricketapp/cric-angular/typings
+
+# e2e
+Cricketapp/cric-angular/e2e/*.js
+Cricketapp/cric-angular/e2e/*.map
+
+# System Files
+Cricketapp/cric-angular/.DS_Store
+Cricketapp/cric-angular/Thumbs.db
+
+
+
+# Node backend ignore paths
+
+Cricketapp/cric-backend/node_modules

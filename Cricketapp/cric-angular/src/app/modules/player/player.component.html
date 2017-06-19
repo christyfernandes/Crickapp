@@ -1,0 +1,114 @@
+<div class="container mt50 layout-spacing">
+  <div class="row main-container">
+    <div class="col-sm-12 text-center">
+      <div class="row">
+        <div class="col-sm-6 text center">
+          <img [src]="playerStats.imageURL" alt="">
+          <div>
+          <img src="http://cdn.cricapi.com/country/Flag of {{playerStats.country}}.png" alt="{{playerStats.country}}" title="{{playerStats.country}}" height="60" style="margin-right:5px;">
+          <span>{{playerStats.country | uppercase}}</span>
+          <h2>{{playerStats.name}}</h2>
+          </div>
+        </div>
+        <div class="col-sm-6 text-left">
+          <p><b>Full name :</b> {{playerStats.fullName}}</p>
+          <p><b>Age : </b>{{playerStats.currentAge}}</p>
+          <p><b>Born : </b>{{playerStats.born}}</p>
+          <p><b>Role : </b>{{playerStats.playingRole}}</p>
+          <p><b>Bowling style : </b>{{playerStats.bowlingStyle}}</p>
+          <p><b>Batting style : </b>{{playerStats.battingStyle}}</p>
+          <p><b>Major Teams : </b>{{playerStats.majorTeams}}</p>
+          <p><b>Info : </b>{{playerStats.profile}}</p>
+        </div>
+      </div>
+
+      <hr>
+      <div class="row">
+        <div class="col-sm-12">
+          <h2 class="text-left"><img src="../../../assets/images/bat.png" alt="" height="50px">Batting Statistics</h2>
+          <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th>League</th>
+                <th>50</th>
+                <th>100</th>
+                <th>St</th>
+                <th>Ct</th>
+                <th>6s</th>
+                <th>4s</th>
+                <th>Ave</th>
+                <th>HS</th>
+                <th>Runs</th>
+                <th>NO</th>
+                <th>Innings</th>
+                <th>Matches</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let data of battingArray">
+                <td>{{data.name}}</td>
+                <td>{{data['50']}}</td>
+                <td>{{data['100']}}</td>
+                <td>{{data.St}}</td>
+                <td>{{data.Ct}}</td>
+                <td>{{data['6s']}}</td>
+                <td>{{data['4s']}}</td>
+                <td>{{data.Ave}}</td>
+                <td>{{data.HS}}</td>
+                <td>{{data.Runs}}</td>
+                <td>{{data.NO}}</td>
+                <td>{{data.Inns}}</td>
+                <td>{{data.Mat}}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-12">
+          <h2 class="text-left"><img src="../../../assets/images/ball.jpg" alt="" height="50px">Bowling Statistics</h2>
+          <table class="table table-bordered">
+            <thead>
+              <tr>
+                <tr>
+                    <th>League</th>
+                    <th>10</th>
+                    <th>5w</th>
+                    <th>4w</th>
+                    <th>Econ</th>
+                    <th>Ave</th>
+                    <th>BBM</th>
+                    <th>BBI</th>
+                    <th>Wkts</th>
+                    <th>Runs</th>
+                    <th>Balls</th>
+                    <th>Inns</th>
+                    <th>Mat</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let data of bowlingArray">
+                <td>{{data.name}}</td>
+                <td>{{data['10']}}</td>
+                <td>{{data['5w']}}</td>
+                <td>{{data['4w']}}</td>
+                <td>{{data.Econ}}</td>
+                <td>{{data.Ave}}</td>
+                <td>{{data.BBM}}</td>
+                <td>{{data.BBI}}</td>
+                <td>{{data.Wkts}}</td>
+                <td>{{data.Runs}}</td>
+                <td>{{data.Balls}}</td>
+                <td>{{data.Inns}}</td>
+                <td>{{data.Mat}}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+</div>

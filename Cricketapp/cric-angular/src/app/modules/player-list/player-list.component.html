@@ -1,0 +1,30 @@
+<div class="container-fluid  layout-spacing">
+  <div class="row mb20 ">
+    <div class="col-sm-offset-3 col-sm-6 ">
+        <input type="search" placeholder="Search" [(ngModel)]="searchString" class="form-control input-box">
+    </div>
+  </div>
+  <div class="row list-container">
+    
+    <div class="col-sm-3 " *ngFor="let player of allPlayers | PlayerFilterPipe: searchString :'name'" (click)="goToPLayerDetails(player.id);">
+      <div class="card clickable">
+        <div>
+          <img src="https://cricapi.com/playerpic/{{player.id}}.jpg" alt="" height="100px" >
+          
+        </div>
+        <div class="text-center">
+          <h3> {{player.name}}</h3>
+        </div>
+      </div>
+      <!--<a class="button view-btn clickable" (click)="goToPLayerDetails(player.id);">View Details</a>-->
+    </div>
+    <div class="text-center col-sm-12" *ngIf="allPlayers==0">
+          <div class="text-center">
+              <h2 class="noResultsFound">Loading...</h2>
+          </div>
+      </div>
+    <div class="text-center col-sm-12" *ngIf="((allPlayers | PlayerFilterPipe: searchString:'name')==false)">
+          <h2 class="text-warning">No match found...</h2>
+      </div>
+  </div>
+</div>

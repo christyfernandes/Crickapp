@@ -1,0 +1,10 @@
+<div class="container-fluid layout-spacing">
+  <div class="row ">
+    <div class="col-sm-3" *ngFor="let match of matchCalendar">
+        <div class="match-card">
+          <p><b>{{match.date | date: 'dd MMM, EEEE hh:mm'}}</b> (UTC)</p>
+                <p>{{match.name}}</p>
+        </div>
+    </div>
+  </div>
+</div>

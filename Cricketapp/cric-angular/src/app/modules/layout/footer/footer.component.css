@@ -1,0 +1,46 @@
+footer{
+    background: rgba(9,16,30,.8);
+    color: #00ffac;
+    padding: 15px;
+    text-align: center;
+    position: relative;
+    bottom:0;
+    width: 100%;
+    box-shadow: 3px 0px 22px 3px rgba(0,0,0,.5);    
+}
+
+.mr20{
+    margin-right: 20px;
+}
+
+footer img{
+    height: 120px;
+    width: 130px;
+    border-radius: 50%;
+    border: 2px solid #00ffac;
+    filter: brightness(100%);
+}    
+
+footer img:hover{
+    filter: brightness(120%);
+}
+
+footer .card{
+    display: inline-block;
+    height:inherit;
+    vertical-align: middle;
+}
+
+footer .card:hover{
+        filter: brightness(120%);
+}
+
+footer .info{
+    height:120px;
+    display:table
+}
+
+footer .info div{
+    display: table-cell; 
+    vertical-align:middle;
+}

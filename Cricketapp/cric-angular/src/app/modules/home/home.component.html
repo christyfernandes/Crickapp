@@ -1,0 +1,70 @@
+<div class="container-fluid layout-spacing">
+  <div class="row homeContainer">
+    <div class="col-sm-12 text-center homeBanner">
+        
+        <div class="search-container">
+          <h2 class="banner-text"><img src="../../../assets/images/cricket-player.png" alt="" height="50px"> Favorite Cricketer</h2>
+            <input ngui-auto-complete [source]="allPlayers" name="playerName" id="playerId" [(ngModel)]="playerData" placeholder="Search a cricketer"
+                                  value-formatter="name" list-formatter="name" [match-formatted]="true" class="form-control players-input"
+                          (valueChanged)="valueChanged($event)"  no-match-found-text="No crickers found!" max-num-list="10"/>
+        </div>
+        
+      
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-12 col-md-4">
+      <div class="matches-container">
+        <div class="row section-container">
+          <h2 class="text-center">New Matches </h2>          
+          <div class="col-sm-6 " *ngFor="let match of newMatches; let i=index">
+            <div class="match-card" *ngIf="i<15">
+              <p title="date"><b>{{match.date | date: 'dd MMM, EEEE hh:mm'}} </b>(UTC)</p>
+              <p title="team-1">{{match["team-1"]}}</p>
+              <p title="team-2">{{match["team-2"]}}</p>
+              <p *ngIf="match.matchStarted" class="text-success"><span class="bg-success indicator"></span> <span class="ml15">Game Started</span></p>
+              <p *ngIf="!match.matchStarted" class="text-warning"><span class="bg-warning indicator"></span><span class="ml15"> Game yet to start </span></p>
+            </div>
+          </div>
+          <hr>
+          <div  class="col-sm-12 text-center view-more" (click)="  gotoNewMatches();"> 
+            <a >View More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+   
+    <div class="col-sm-12 col-md-6">
+      <div class="matches-container">
+        <div class="row section-container">
+          <h2 class="text-center" >Matches Calendar</h2>
+          <div class="col-sm-4 " *ngFor="let match of matchCalendar; let i=index">
+              <div class="" *ngIf="i<15">
+                <div class="match-card fixed">
+                  <p title="date"><b>{{match.date | date: 'dd MMM, EEEE hh:mm'}}</b> (UTC)</p>
+                  <p title="match title">{{match.name}}</p>
+                </div>
+              </div>
+          </div>
+          <div  class="col-sm-12 text-center view-more" (click)="  gotoNewMatches();"> 
+            <a >View More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+     <div class="col-sm-12 col-md-2">
+      <div class="matches-container">
+        <div class="row section-container">
+          <h2 class="text-center">Recent Matches</h2>
+          <div class="col-sm-12 match-card" *ngFor="let match of oldMatches">
+              <p title="match title"><b>{{match.title}}</b></p>
+              <p title="match-description">{{match.description}}</p>
+              
+            </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

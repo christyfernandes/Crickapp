@@ -1,0 +1,81 @@
+.layout-spacing{
+    margin: 50px 0;
+}
+.ml15{
+    margin-left:15px;
+}
+
+.search-container{
+    margin: 10% auto;
+    width: 50%;
+    padding: 24px 30px;
+    background: rgba(0,0,0,.2);
+    vertical-align: middle;
+    border-radius: 18px;
+}
+
+.homeContainer{
+    height:40vh;
+}
+.homeBanner{
+    background: url(../../../assets/images/banner3.jpg);
+    background-size: cover;
+        background-position: 13% 96%;
+}
+
+h2.banner-text{
+    font-weight: 700;
+    color: #fff;
+    text-shadow: 2px 2px 1px rgba(0,0,0,.5);
+}
+
+.search-container .players-input{
+    width:100%;
+    border-radius: 8px;
+    height: 45px;
+}
+.matches-container{
+    padding:5px 10px;
+}
+
+.section-container{
+    border: 0.5px solid #eee;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+    margin: 20px 0;
+}
+
+
+.match-card{
+    padding: 10px;
+    background-color: #eee;
+    margin-bottom: 5px;
+}
+
+.match-card.fixed{
+    min-height:160px;
+    padding: 10px;
+    overflow: hidden;
+    /*background: #fff;*/
+}
+
+.indicator{
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 50%;
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    margin:4px 0;
+}
+
+.view-more{
+    background: rgba(13,41,43,074);
+    color: #00ffac;
+    padding: 15px;
+    cursor: pointer;
+}
+
+.view-more > a{
+    color:#00ffac;
+    text-decoration: none;
+}

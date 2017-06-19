@@ -1,0 +1,13 @@
+<div class="container-fluid layout-spacing">
+  <div class="row ">
+    <div class="col-sm-3" *ngFor="let match of newMatches">
+        <div class="match-card">
+          <p><b>{{match.date | date: 'dd MMM, EEEE hh:mm'}} </b>(UTC)</p>
+            <p>{{match["team-1"]}}</p>
+            <p>{{match["team-2"]}}</p>
+            <p *ngIf="match.matchStarted" class="text-success"><span class="bg-success indicator"></span> <span class="ml15">Game Started</span></p>
+            <p *ngIf="!match.matchStarted" class="text-warning"><span class="bg-warning indicator"></span><span class="ml15"> Game yet to start </span></p>
+        </div>
+    </div>
+  </div>
+</div>
