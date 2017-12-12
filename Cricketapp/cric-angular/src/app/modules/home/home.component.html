@@ -28,7 +28,7 @@
             </div>
           </div>
           <hr>
-          <div  class="col-sm-12 text-center view-more" (click)="  gotoNewMatches();"> 
+          <div  class="col-sm-12 text-center view-more" [routerLink]="['new-matches']" > 
             <a >View More</a>
           </div>
         </div>
@@ -47,7 +47,7 @@
                 </div>
               </div>
           </div>
-          <div  class="col-sm-12 text-center view-more" (click)="  gotoNewMatches();"> 
+          <div  class="col-sm-12 text-center view-more" [routerLink]="['match-calendar']"> 
             <a >View More</a>
           </div>
         </div>

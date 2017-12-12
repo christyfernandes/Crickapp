@@ -13,12 +13,12 @@ export class HeaderComponent implements OnInit {
   ngOnInit() {
   }
 
-  gotoHome(){
-    this.router.navigate([CRICKET.ROUTES.ROOT]);
-  }
+  // gotoHome(){
+  //   this.router.navigate([CRICKET.ROUTES.ROOT]);
+  // }
 
-  gotoAllPlayers(){
-    this.router.navigate([CRICKET.ROUTES.ALL_PLAYERS]);
-  }
+  // gotoAllPlayers(){
+  //   this.router.navigate([CRICKET.ROUTES.ALL_PLAYERS]);
+  // }
 
 }

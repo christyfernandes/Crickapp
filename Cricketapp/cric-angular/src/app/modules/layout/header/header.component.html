@@ -7,13 +7,19 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <img src="../../../assets/images/logo.png" class="logo clickable" alt="" height="50px" (click)="gotoHome();">
+          <img src="../../../assets/images/logo.png" class="logo clickable" alt="" height="50px" [routerLink]="['/']">
         </div>
         <div id="navbar" class="collapse navbar-collapse pull-right">
-          <ul class="nav navbar-nav">
+          <!-- <ul class="nav navbar-nav">
             <li class="clickable"><a  href="">Home</a></li>
             <li class="clickable"><a  (click)="gotoAllPlayers();">Players List</a></li>
+          </ul> -->
+          <ul class="nav navbar-nav">
+            <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"> <a [routerLink]="['/']">Home</a></li>
+            <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"> <a [routerLink]="['all-players']">Players List</a></li>
           </ul>
         </div>
       </div>
     </nav>
+
+    

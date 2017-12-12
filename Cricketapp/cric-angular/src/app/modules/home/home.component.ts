@@ -63,14 +63,13 @@ export class HomeComponent implements OnInit {
   valueChanged(data){
     this.router.navigate([CRICKET.ROUTES.PLAYER], { queryParams: { playerIdSelected: data.id  }
     });
-    //this.router.navigate([CRICKET.ROUTES.PLAYER]);
   }
 
-  gotoNewMatches(){
-    this.router.navigate([CRICKET.ROUTES.NEW_MATCHES]);
-  }
+  // gotoNewMatches(){
+  //   this.router.navigate([CRICKET.ROUTES.NEW_MATCHES]);
+  // }
 
-  gotoMatchCalendar(){
-     this.router.navigate([CRICKET.ROUTES.MATCH_CALENDAR]);
-  }
+  // gotoMatchCalendar(){
+  //    this.router.navigate([CRICKET.ROUTES.MATCH_CALENDAR]);
+  // }
 }
